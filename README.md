@@ -1,3 +1,13 @@
+## Quickstart
+Ensure that you have access to a computer with an NVIDIA GPU. If you don’t have your own setup, you can try [Saturn Cloud](https://saturncloud.io/) for a free GPU-powered Jupyter solution.
+
+Install Docker version 1.10.0+ and Docker Compose version 1.28.0+.
+
+Get access to your GPU via CUDA drivers within Docker containers. For this, follow the installation steps in this [Medium article](https://medium.com/@christoph.schranz/set-up-your-own-gpu-based-jupyterlab-e0d45fcacf43). You can confirm that you can access your GPU within Docker if the command below returns a result similar to this one:
+```
+docker run --gpus all nvidia/cuda:12.3.2-cudnn9-runtime-ubuntu22.04 nvidia-smi
+```
+## jupyterlab-nvdashboard
 To run the jupyterlab-nvdashboard extension in JupyterLab, follow these steps:
 
 1. Make sure you have JupyterLab installed. If not, you can install it using pip:
